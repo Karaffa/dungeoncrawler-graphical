@@ -1,0 +1,212 @@
+<?xml version = "1.0"?>
+<GameData>
+<!-- screenTitle is also used to identify you and your animation. 
+     So make sure to include your name as part of the screenTitle -->
+<title>The Tracker Framework</title>
+<maxStringSize>50</maxStringSize>
+
+<frameCapOn>true</frameCapOn>
+<period>17</period>
+
+<maxFrames>300</maxFrames>
+<username>pkaraff</username>
+
+<numberOfStars>25</numberOfStars>
+
+<view>
+  <width>854</width>
+  <height>480</height>
+</view>
+
+<world>
+  <width>854</width>
+  <height>480</height>
+</world>
+
+<backlava>
+  <file>assets/lavatexture.png</file>
+  <factor>1</factor>
+  <transparency>false</transparency>
+</backlava>
+
+<back>
+  <file>assets/thepit.png</file>
+  <factor>1</factor>
+  <transparency>false</transparency>
+</back>
+
+<font name="font">
+  <file>fonts/arial.ttf</file>
+  <size>24</size>
+  <red>255</red>
+  <green>0</green>
+  <blue>0</blue>
+  <alpha>0</alpha>
+</font>
+
+<SpinningStar>
+  <file>assets/linkright.png</file>
+  <startLoc x="300" y="300"/>
+  <frames>8</frames>
+  <Width>15</Width>
+  <Height>23</Height>
+  <frameSpeed>128</frameSpeed>
+  <worldTop>120</worldTop>
+  <worldBottom>600</worldBottom>
+  <speed x="200" y="200" />
+  <bound upper="100" lower="620"/>
+  <transparency>false</transparency>
+</SpinningStar>
+
+<SpinningStarLeft>
+  <file>assets/linkleft.png</file>
+  <startLoc x="50" y="140"/>
+  <frames>8</frames>
+  <Width>15</Width>
+  <Height>23</Height>
+  <frameSpeed>128</frameSpeed>
+  <worldTop>120</worldTop>
+  <worldBottom>600</worldBottom>
+  <speed x="200" y="200" />
+  <bound upper="100" lower="620"/>
+  <transparency>false</transparency>
+</SpinningStarLeft>
+
+<SpinningStarUp>
+  <file>assets/linkrun.png</file>
+  <startLoc x="50" y="140"/>
+  <frames>6</frames>
+  <Width>16</Width>
+  <Height>22</Height>
+  <frameSpeed>95</frameSpeed>
+  <worldTop>120</worldTop>
+  <worldBottom>600</worldBottom>
+  <speed x="200" y="200" />
+  <bound upper="100" lower="620"/>
+  <transparency>false</transparency>
+</SpinningStarUp>
+
+<SpinningStarDown>
+  <file>assets/linkdown.png</file>
+  <startLoc x="50" y="140"/>
+  <frames>9</frames>
+  <Width>16</Width>
+  <Height>22</Height>
+  <frameSpeed>143</frameSpeed>
+  <worldTop>120</worldTop>
+  <worldBottom>600</worldBottom>
+  <speed x="200" y="200" />
+  <bound upper="100" lower="620"/>
+  <transparency>false</transparency>
+</SpinningStarDown>
+
+<SpinningStarSlashR>
+  <file>assets/slashRight.png</file>
+  <startLoc x="50" y="140"/>
+  <frames>3</frames>
+  <Width>23</Width>
+  <Height>21</Height>
+  <frameSpeed>86</frameSpeed>
+  <worldTop>120</worldTop>
+  <worldBottom>600</worldBottom>
+  <speed x="200" y="200" />
+  <bound upper="100" lower="620"/>
+  <transparency>false</transparency>
+</SpinningStarSlashR>
+
+<SpinningStarSlashL>
+  <file>assets/slashLeft.png</file>
+  <startLoc x="50" y="140"/>
+  <frames>3</frames>
+  <Width>23</Width>
+  <Height>21</Height>
+  <frameSpeed>86</frameSpeed>
+  <worldTop>120</worldTop>
+  <worldBottom>600</worldBottom>
+  <speed x="200" y="200" />
+  <bound upper="100" lower="620"/>
+  <transparency>false</transparency>
+</SpinningStarSlashL>
+
+<SpinningStarSlashU>
+  <file>assets/slashUp.png</file>
+  <startLoc x="50" y="140"/>
+  <frames>3</frames>
+  <Width>23</Width>
+  <Height>26</Height>
+  <frameSpeed>78</frameSpeed>
+  <worldTop>120</worldTop>
+  <worldBottom>600</worldBottom>
+  <speed x="200" y="200" />
+  <bound upper="100" lower="620"/>
+  <transparency>false</transparency>
+</SpinningStarSlashU>
+
+<SpinningStarSlashD>
+  <file>assets/slashDown.png</file>
+  <startLoc x="50" y="140"/>
+  <frames>3</frames>
+  <Width>22</Width>
+  <Height>31</Height>
+  <frameSpeed>86</frameSpeed>
+  <worldTop>120</worldTop>
+  <worldBottom>600</worldBottom>
+  <speed x="200" y="200" />
+  <bound upper="100" lower="620"/>
+  <transparency>false</transparency>
+</SpinningStarSlashD>
+
+<YellowStar>
+  <file>assets/fireorb.png</file>
+  <startLoc x="400" y="140"/>
+  <speedX>199</speedX>
+  <speedY>199</speedY>
+  <safeDistance>50</safeDistance>
+  <transparency>false</transparency>
+  <chunk>
+    <size>4</size>
+    <distance>200</distance>
+  </chunk>
+</YellowStar>
+
+<hud>
+  <file>assets/blackhud.png</file>
+  <startLoc x="20" y="20"/>
+  <speedX>0</speedX>
+  <speedY>0</speedY>
+  <transparency>false</transparency>
+</hud>
+
+<hudtwo>
+  <file>assets/blackhudtwo.png</file>
+  <startLoc x="20" y="20"/>
+  <speedX>0</speedX>
+  <speedY>0</speedY>
+  <transparency>false</transparency>
+</hudtwo>
+
+<hudthree>
+  <file>assets/blackhudthree.png</file>
+  <startLoc x="20" y="20"/>
+  <speedX>0</speedX>
+  <speedY>0</speedY>
+  <transparency>false</transparency>
+</hudthree>
+
+<hudfour>
+  <file>assets/blackhudfour.png</file>
+  <startLoc x="20" y="20"/>
+  <speedX>0</speedX>
+  <speedY>0</speedY>
+  <transparency>false</transparency>
+</hudfour>
+
+<hudf1>
+  <file>assets/blackhudf1.png</file>
+  <startLoc x="20" y="20"/>
+  <speedX>0</speedX>
+  <speedY>0</speedY>
+  <transparency>false</transparency>
+</hudf1>
+
+</GameData>

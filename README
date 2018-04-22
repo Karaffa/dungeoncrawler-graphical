@@ -1,0 +1,19 @@
+Name: Pierre Karaffa
+
+Course: CPSC 4160
+
+Clemson Email Address: pkaraff@clemson.edu
+
+Project no: 4
+
+Project due date: 3/6/2018
+
+Project description: 
+
+The easiest part of this project: choosing the sprites.
+
+Problems that I had in completing this project: I could not get simplescreenrecorder to not chop the video in half for quite some time.
+
+What I want to do with this project: I want to have it so that link can only walk on the arena and not the lava. The goal will be to slash the fireorbs out of the air while making sure not to get hit by them. They will run away if link is facing them but will track after link if he is facing away to attempt to do damage to him. 
+
+These sprites are from Legend of Zelda: A Link to the Past.
