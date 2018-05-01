@@ -28,6 +28,7 @@ public:
   void detach( SmartSprite* o );
 
   int healthHit();
+  bool isDead();
 
   void slash();
   bool isSlashing();

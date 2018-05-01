@@ -11,7 +11,7 @@
 <maxFrames>300</maxFrames>
 <username>pkaraff</username>
 
-<numberOfStars>25</numberOfStars>
+<numberOfStars>5</numberOfStars>
 
 <view>
   <width>854</width>
@@ -29,6 +29,12 @@
   <transparency>false</transparency>
 </backlava>
 
+<menu>
+  <file>assets/menu.png</file>
+  <factor>1</factor>
+  <transparency>false</transparency>
+</menu>
+
 <back>
   <file>assets/thepit.png</file>
   <factor>1</factor>
@@ -36,7 +42,7 @@
 </back>
 
 <font name="font">
-  <file>fonts/arial.ttf</file>
+  <file>fonts/OldLondon.ttf</file>
   <size>24</size>
   <red>255</red>
   <green>0</green>

@@ -16,7 +16,8 @@ class Engine {
 public:
   Engine ();
   ~Engine ();
-  void play();
+  bool play();
+  bool Menu();
 
   Engine(const Engine&) = delete;
   Engine& operator=(const Engine&) = delete;
@@ -28,6 +29,7 @@ private:
   SDL_Renderer * const renderer;
   World world;
   World lava;
+  World menu;
   Viewport& viewport;
 
   Player* player;

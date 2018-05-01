@@ -58,6 +58,9 @@ void Player::update(Uint32 ticks) {
     (*ptr)->setPlayerPos( getPosition() );
     ++ptr;
   }
+  if(getX() < 98 || getX() > 738 || getY() < 49 || getY() > 405){
+    health = 0;
+  }
 }
 
 void Player::detach( SmartSprite* o ) {
@@ -72,7 +75,6 @@ void Player::detach( SmartSprite* o ) {
 }
 
 int Player::healthHit(){
-  //std::cout << health << std::endl;
   if(health > 0) health--;
   return health;
 }
@@ -83,4 +85,11 @@ void Player::slash(){
 
 bool Player::isSlashing(){
   return TwowayMultisprite::isSlashing();
+}
+
+bool Player::isDead(){
+  if(health == 0){
+    return true;
+  }
+  else return false;
 }

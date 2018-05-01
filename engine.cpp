@@ -34,6 +34,7 @@ Engine::Engine() :
   renderer( rc->getRenderer() ),
   world("back", Gamedata::getInstance().getXmlInt("back/factor") ),
   lava("backlava", Gamedata::getInstance().getXmlInt("backlava/factor") ),
+  menu("menu", Gamedata::getInstance().getXmlInt("menu/factor") ),
   viewport( Viewport::getInstance() ),
   player(new Player("SpinningStar")),
   hud(new Hud("hud")),
@@ -74,7 +75,11 @@ void Engine::draw() const {
   if (collision) {
     IOmod::getInstance().writeText("Oops: Collision", 500, 90);
   }
-  player->draw();
+  if(player->isDead() || sprites.size() == 0){
+    io.writeText("Press R to Restart", 340, 210);
+    clock.pause();
+  }
+  else player->draw();
   hud->draw();
   SDL_Color color = {0, 0, 255, 255};
   IOmod::getInstance().writeText("Pierre Karaffa", color, 0, 453);
@@ -93,6 +98,7 @@ void Engine::checkForCollisions() {
       //player->detach(doa);
       delete doa;
       it = sprites.erase(it);
+      break;
     }
     if (doa != NULL && strategies[currentStrategy]->execute(*player, **it)) {
       doa->explode();
@@ -116,7 +122,42 @@ void Engine::update(Uint32 ticks) {
   viewport.update(); // always update viewport last
 }
 
-void Engine::play() {
+bool Engine::Menu(){
+  SDL_Event event;
+  const Uint8* keystate;
+  bool done = false;
+  Uint32 ticks = clock.getElapsedTicks();
+  FrameGenerator frameGen;
+  menu.draw();
+  //viewport.draw();
+  SDL_RenderPresent(renderer);
+  clock.pause();
+
+  while (!done) {
+    // The next loop polls for events, guarding against key bounce:
+    while ( SDL_PollEvent(&event) ) {
+      keystate = SDL_GetKeyboardState(NULL);
+      if (event.type ==  SDL_QUIT) { done = true; break; }
+      if(event.type == SDL_KEYDOWN) {
+        if (keystate[SDL_SCANCODE_ESCAPE] || keystate[SDL_SCANCODE_Q] || keystate[SDL_SCANCODE_SPACE]) {
+          clock.unpause();
+          done = true;
+          return false;
+        }
+      }
+    }
+
+    // In this section of the event loop we allow key bounce:
+
+    ticks = clock.getElapsedTicks();
+    if ( ticks > 0 ) {
+      clock.incrFrame();
+    }
+  }
+  return true;
+}
+
+bool Engine::play() {
   SDL_Event event;
   const Uint8* keystate;
   bool done = false;
@@ -136,6 +177,10 @@ void Engine::play() {
         if ( keystate[SDL_SCANCODE_P] ) {
           if ( clock.isPaused() ) clock.unpause();
           else clock.pause();
+        }
+        if ( keystate[SDL_SCANCODE_R] ) {
+          clock.unpause();
+          return true;
         }
         if ( keystate[SDL_SCANCODE_M] ) {
           currentStrategy = (1 + currentStrategy) % strategies.size();
@@ -181,4 +226,5 @@ void Engine::play() {
       }
     }
   }
+  return false;
 }
